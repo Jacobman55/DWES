@@ -5,8 +5,8 @@
 	<head>
 		<style>
 			img{
-				width 100px;
-				height 200px;
+				max-width: 300px;
+				max-height:500px;
 			}
 		</style>
 	</head>
@@ -19,7 +19,7 @@
 			//Recorre el resultado
 			while($row=mysqli_fetch_array($result)){
 				echo '<ul>';
-				echo '<li>Nombre: '.$row[1].'</li>';
+				echo '<li><a href="/detail.php?id='.$row[0].'">Nombre: '.$row[1].'</a></li>';
 				echo '<img src='.$row[2].'></img>';
 				echo '<br>';
 				echo '<li>Año: '.$row[3].'</li>';
