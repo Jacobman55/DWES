@@ -19,7 +19,7 @@
 			//Recorre el resultado
 			while($row=mysqli_fetch_array($result)){
 				echo '<ul>';
-				echo '<li><a href="/detail.php?id='.$row[0].'">Nombre: '.$row[1].'</a></li>';
+				echo '<li><a href="/detail.php?juego_id='.$row[0].'">Nombre: '.$row[1].'</a></li>';
 				echo '<img src='.$row[2].'></img>';
 				echo '<br>';
 				echo '<li>Año: '.$row[3].'</li>';
