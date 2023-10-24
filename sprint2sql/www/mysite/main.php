@@ -5,6 +5,7 @@
 	<head>
 		<style>
 			img{
+				/*CSS*/
 				max-width: 300px;
 				max-height:500px;
 			}

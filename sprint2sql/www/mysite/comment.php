@@ -4,10 +4,13 @@
 <html>
 	<body>
 		<?php
+			//Cargamos las variables
 			$juego_id=$_POST['juego_id'];
 			$comentario=$_POST['new_comment'];
-			$query="INSERT INTO tComentarios(comentario,usuario_id,juego_id) VALUES ('".$comentario."',NULL,".$juego_id.")";
+			//Insertamos dentro de la tabla el comentario
+			$query="INSERT INTO tComentarios(comentario,usuario_id,juego_id,fecha) VALUES ('".$comentario."',NULL,".$juego_id.",now())";
 		mysqli_query($db,$query) or die('Error');
+		//Creamos lo que se muestra por pantalla
 		echo "<p>Nuevo comentario ";
 		echo mysqli_insert_id($db);
 		echo "añadido</p>";
