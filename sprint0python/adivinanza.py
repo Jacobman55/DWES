@@ -8,3 +8,23 @@ if __name__=="__main__":
         print("Correcto")
     else:
         print("Error")
+    
+    print("Oro parece plata no es")
+    print("a- Comida")
+    print("b- Cro")
+    print("c- Platano")
+    respuesta=input("Cual es la correcta?")
+    if respuesta == "c":
+        print("Correcto")
+    else:
+        print("Error")
+    
+    print("Que es del tamaño de una nuez que sube la cuesta y no tiene pies ?")
+    print("a- oruga")
+    print("b- Caracol")
+    print("c- gusano")
+    respuesta=input("Cual es la correcta?")
+    if respuesta == "b":
+        print("Correcto")
+    else:
+        print("Error")
