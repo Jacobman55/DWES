@@ -1,4 +1,5 @@
 if __name__=="__main__":
+    const =0;
     print("Adivina adivinanza que tiene el rey en la panza")
     print("a- Comida")
     print("b- Ombligo")
@@ -9,8 +10,10 @@ if __name__=="__main__":
         respuesta=input("Cual es la correcta?")
     if respuesta == "a":
         print("Correcto")
+        const=const+10
     else:
         print("Error")
+        const=const-5
     
     print("Oro parece plata no es")
     print("a- Comida")
@@ -22,8 +25,10 @@ if __name__=="__main__":
         respuesta=input("Cual es la correcta?")
     if respuesta == "c":
         print("Correcto")
+        const=const+10
     else:
         print("Error")
+        const=const-5
     
     print("Que es del tamaño de una nuez que sube la cuesta y no tiene pies ?")
     print("a- oruga")
@@ -35,5 +40,10 @@ if __name__=="__main__":
         respuesta=input("Cual es la correcta?")
     if respuesta == "b":
         print("Correcto")
+        const=const+10
     else:
         print("Error")
+        const=const-5
+
+    print("Tu puntuacion es de:")
+    print(const)
