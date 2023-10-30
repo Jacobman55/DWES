@@ -4,6 +4,9 @@ if __name__=="__main__":
     print("b- Ombligo")
     print("c- manta")
     respuesta=input("Cual es la correcta?")
+    while (respuesta!="a")&(respuesta!="b")&(respuesta!="c"):
+        print("Eso no está dentro de las opciones")
+        respuesta=input("Cual es la correcta?")
     if respuesta == "a":
         print("Correcto")
     else:
@@ -14,6 +17,9 @@ if __name__=="__main__":
     print("b- Cro")
     print("c- Platano")
     respuesta=input("Cual es la correcta?")
+    while (respuesta!="a")&(respuesta!="b")&(respuesta!="c"):
+        print("Eso no está dentro de las opciones")
+        respuesta=input("Cual es la correcta?")
     if respuesta == "c":
         print("Correcto")
     else:
@@ -24,6 +30,9 @@ if __name__=="__main__":
     print("b- Caracol")
     print("c- gusano")
     respuesta=input("Cual es la correcta?")
+    while (respuesta!="a")&(respuesta!="b")&(respuesta!="c"):
+        print("Eso no está dentro de las opciones")
+        respuesta=input("Cual es la correcta?")
     if respuesta == "b":
         print("Correcto")
     else:
