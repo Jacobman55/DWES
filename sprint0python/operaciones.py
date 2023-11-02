@@ -9,13 +9,15 @@ def division (a,b):
         return print("Entre 0 no se vale")
     else:
         return print(a / b)
+    
+if __name__=="__main__":
 
-a=2
-b=0
-c=6
+    a=2
+    b=0
+    c=6
 
-suma(a,c)
-resta(a,c)
-multiplicacion(a,c)
-division (c,b)
-division(c,a)
+    suma(a,c)
+    resta(a,c)
+    multiplicacion(a,c)
+    division (c,b)
+    division(c,a)
