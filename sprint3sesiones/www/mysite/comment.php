@@ -4,18 +4,37 @@
 <html>
 	<body>
 		<?php
+			session_start();
+			$user_id='NULL';
+			if (!empty($_SESSION['user_id'])) {
+				$user_id=$_SESSION['user_id'];
+			}
 			//Cargamos las variables
 			$juego_id=$_POST['juego_id'];
 			$comentario=$_POST['new_comment'];
 			//Insertamos dentro de la tabla el comentario
-			$query="INSERT INTO tComentarios(comentario,usuario_id,juego_id,fecha) VALUES ('".$comentario."',NULL,".$juego_id.",now())";
-		mysqli_query($db,$query) or die('Error');
-		//Creamos lo que se muestra por pantalla
-		echo "<p>Nuevo comentario ";
-		echo mysqli_insert_id($db);
-		echo "añadido</p>";
-		echo "<a href='/detail.php?juego_id=".$juego_id."'>Volver</a>";
-		mysqli_close($db);
+			$ahora=date('Y-m-d');
+			//$query="INSERT INTO tComentarios(comentario,usuario_id,juego_id,fecha) VALUES ('".$comentario."',NULL,".$juego_id.",now())";
+			echo '<p>si rompe</p>';
+			$comprobacion=$db->prepare("INSERT INTO tComentarios(comentario,usuario_id,juego_id,fecha) VALUES (?,?,?,?)");
+            $comprobacion->bind_param("siis",$comentario,$user_id,$juego_id,$ahora);
+			echo $comentario;
+			echo '<br>';
+			echo $user_id;
+			echo '<br>';
+			echo $juego_id;
+			echo '<br>';
+			echo $ahora;
+			echo '<p>eyeccion</p>';
+            $comprobacion->execute();
+			echo '<p>no rompio</p>';
+			//Creamos lo que se muestra por pantalla
+			echo "<p>Nuevo comentario ";
+			echo mysqli_insert_id($db);
+			echo "añadido</p>";
+			echo "<a href='/detail.php?juego_id=".$juego_id."'>Volver</a>";
+			$comprobacion->close();
+			mysqli_close($db);
 		?>
 	</body>
 </html>

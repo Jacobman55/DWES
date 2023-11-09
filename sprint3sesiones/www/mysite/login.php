@@ -19,4 +19,6 @@
     } else {
         echo '<p>Usuario no encontrado con ese email</p>';
     }
+    $comprobacionmail->close();
+    mysqli_close($db);
 ?>
