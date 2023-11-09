@@ -5,7 +5,7 @@
 	<body>
 		<?php
 			session_start();
-			$user_id='NULL';
+			$user_id=NULL;
 			if (!empty($_SESSION['user_id'])) {
 				$user_id=$_SESSION['user_id'];
 			}

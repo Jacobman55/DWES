@@ -13,6 +13,7 @@
 	</head>
 	<body>
 		<h1>Conexión establecida </h1>
+		<a href="/logout.php">Log out</a>
 		<?php
 			//Lanza la sentencia
 			$query='SELECT * FROM tJuegos';
