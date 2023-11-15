@@ -50,5 +50,7 @@
 			}
 			mysqli_close($db);
 		?>
+		<br>
+		<a href="/cambpass.html">Cambiar contraseña</a>
 	</body>
 </html>
