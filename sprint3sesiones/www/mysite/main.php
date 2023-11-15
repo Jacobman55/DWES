@@ -9,6 +9,25 @@
 				max-width: 300px;
 				max-height:500px;
 			}
+			li:hover{
+				color: red;
+			}
+			li>a:hover{
+				color:red;
+			}
+			ul:hover{
+				font-size: 20px;
+			}
+			a {
+				text-decoration: none;
+				color: blue;
+			}
+			a:hover {
+				color: red;
+			}
+			a {
+				transition: color 0.8s linear 0.2s;
+			}
 		</style>
 	</head>
 	<body>
