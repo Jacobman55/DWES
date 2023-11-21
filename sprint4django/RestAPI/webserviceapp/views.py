@@ -36,3 +36,13 @@ def devolver_juegos_por_id(request, id_solicitado):
 			'comentarios':lista_comentarios
 		}
 		return JsonResponse(resultado,json_dumps_params={'ensure_ascii':False})
+
+def guardar_comentario(request, juego_id):
+	if request.method!='POST':
+		return None
+	json_peticion=json.loads(request.body)
+	comentario=Tcomentarios()
+	comentario.comentario=json_peticion['nuevo_comentario']
+	comentario.juego=Tjuegos.objects.get(id=juego_id)
+	comentario.save()
+	return JsonResponse({"status":"ok"})
