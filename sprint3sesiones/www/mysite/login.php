@@ -1,5 +1,5 @@
 <?php
-	$db = mysqli_connect('localhost','root','1234','mysitedb') or die('Fail');
+	$db = mysqli_connect('172.16.0.2','root','1234','mysitedb') or die('Fail');
     $email = $_POST['email'];
     $password = $_POST['password1'];
     $comprobacionmail=$db->prepare("SELECT id, contraseña FROM tUsuarios WHERE email =?");
